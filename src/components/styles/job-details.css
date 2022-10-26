@@ -1,0 +1,76 @@
+.doc-list, .files-list{padding: 0;margin: 0;list-style: none;}
+.doc-list li{    width: 49%;display: inline-block; margin-right: 5px;margin-bottom: 10px;}
+.doc-list li span, .files-list li span{float:right;color: #839EE0;font-size:13px;}
+.doc-list li a, .files-list li a{padding: 10px 20px;background: #EEF5FB;display: block; font-size: 14px;color: #000;
+    text-decoration: none;}
+.vacancy-title {font-size: 28px;margin-bottom: 0;color:#000;    font-weight: 600;}
+.vacancy-title  span{color:#2697FF;}
+
+.doc-list li a img, .files-list li a img {
+    height: 35px;
+    margin-right: 5px;
+}
+
+.files-list li{ width:100%; margin-bottom: 10px;}
+
+.custom-table{padding:0px 15px ;}
+.custom-table th, .custom-table td{border:0px;padding: 5px;font-size:15px;}
+.custom-content{padding: 0px 25px;}
+.start-closed-box{background: #EEF5FB;background: #EEF5FB;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;}
+
+.start-closed-box .closing{color:#2697FF ;margin-right: 10px;} 
+.start-closed-box .starting{color:#2697FF ;margin-left: 10px;} 
+.start-closed-box .starting span, .start-closed-box .closing span {color:#000;} 
+
+ul.circle-list {
+    margin: 0;
+    list-style: none;
+    padding-left: 10px;
+}
+ul.circle-list li{ margin-bottom: 10px;position: relative;padding-left: 22px;}
+ul.circle-list li i{position: absolute;left: 0px; top: 6px;color: #2697FF;font-size: 14px;}
+.mapbox{border: 2px dotted #BFBFBF; display: flex; flex-direction: row; flex-wrap: wrap;
+    align-content: center;  justify-content: center; align-items: center;height: 200px;}
+.mapbox .content i{ color: #D3DCE3;margin-bottom: 10px; font-size:22px;   }
+.mapbox .content h4{ color: #797995;    font-size: 18px; }
+.mapbox .content h4 span{ color: #2697FF;}
+
+
+.job-timing{padding: 0;margin: 0;list-style: none;display: flex;
+    flex-direction: row; flex-wrap: wrap;    align-content: center;justify-content: center; align-items: center;}
+.job-timing li{display: inline-block;color:#dc3545;margin: 0 10px;text-align: center;font-weight: 600;}
+.job-timing li span{ display:block;width:100%;color:#000;}
+.job-info ul{padding: 0;margin: 0;list-style: none;}
+.job-info ul li{ margin-bottom: 10px; }
+.job-info ul li span{display: block;width:100%;color:#000;font-weight:600;}
+.job-details{ background: #EEF5FB;margin-bottom: 15px;margin-top: 10px;padding: 10px 0px;}
+.orbox{margin: 10px 0px;text-align: center;color:#797995 ;width:100%;}
+.linktext{width:100%;text-align: center;}
+
+.sharebox ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.sharebox ul  li{color: #797995; margin: 0 8px;}
+.sharebox ul  li a{color: #797995;text-decoration:none;}
+.sharebox {padding-bottom: 20px;}
+
+.school-detail h5{color:#797995;}
+.school-detail ul{padding: 0;margin: 0;list-style: none;}
+.school-detail ul li{margin-bottom: 5px;}
+.school-detail ul li:first-child{margin-bottom: 15px;}
+
+@media only screen and (max-width: 991px) {
+    .doc-list li{width:100%;}
+
+}

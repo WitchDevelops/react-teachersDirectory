@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content=" " />
+    <meta name="description" content=" "    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Teachers Directory</title>
+
+     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+     <!-- Vendor CSS Files --> 
+    <link href="%PUBLIC_URL%/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/assets/css/main.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/assets/css/menukit.css" rel="stylesheet">
+    
+    <link href="%PUBLIC_URL%/assets/include/fontawesome/css/all.min.css" rel="stylesheet">
+	 
+ 
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+   
+   
+    <script src="%PUBLIC_URL%/assets/js/jquery-3.0.0.min.js"></script>
+	  <script src="%PUBLIC_URL%/assets/js/bootstrap.bundle.min.js"></script>
+	  <script src="%PUBLIC_URL%/assets/js/menukit.js"></script>
+	   
+<style>
+  .position_depend_div, .email_dep_div, .teacher_depe_dic, .doc_depend_div{display:none;}
+  .visibility{
+    visibility: unset !important;
+    opacity: 1 !important;
+    z-index: 999 !important; top: 55px !important;
+  }
+  .form-dropdown{padding:6px 11px !important;}
+  .doc_div input{
+    top: 200px;
+    position: absolute;
+    right: 98px;
+  }
+</style>
+    <script>
+
+
+
+
+
+      jQuery(document).ready(function(e){
+      //   jQuery(document).on('click','.dropdown-item',function(){
+      //   alert("ss");
+			// //debugger
+			// jQuery(this).toggleClass("show");
+			// var dropdownItem = e.target;
+			// var container = $(this).find(".selectBox__value");
+			// container.text(dropdownItem.text);
+			// jQuery(dropdownItem)
+			//   .addClass("active")
+			//   .siblings()
+			//   .removeClass("active");
+		  // });
+
+
+
+
+        jQuery(document).on('click','#position .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          if(value1==""){
+            jQuery('.position_depend_div').hide();
+          }else{
+            jQuery('.position_depend_div').show();
+          }
+          jQuery('#position .selectBox__value').html(value1);
+          jQuery('#position .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        
+        jQuery(document).on('click','#workplace .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          jQuery('#workplace .selectBox__value').html(value1);
+          jQuery('#workplace .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        jQuery(document).on('click','#hold-position .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          jQuery('#hold-position .selectBox__value').html(value1);
+          jQuery('#hold-position .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        jQuery(document).on('click','#hold-grade .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          jQuery('#hold-grade .selectBox__value').html(value1);
+          jQuery('#hold-grade .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        jQuery(document).on('click','#choose-university .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          jQuery('#choose-university .selectBox__value').html(value1);
+          jQuery('#choose-university .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        jQuery(document).on('click','#plateform .dropdown-item',function(){
+          var value1 = jQuery(this).html();
+          jQuery('#plateform .selectBox__value').html(value1);
+          jQuery('#plateform .selectBox__value').addClass('active');
+          jQuery('.dropdown-menu.visibility').removeClass('visibility');
+          
+        });
+
+        jQuery(document).on('change','.doc_div input',function(){
+          var selectval = $(this).val();
+          
+          if(selectval == ""){
+            jQuery('.doc_depend_div').hide();
+          }else{
+            jQuery('.doc_depend_div').show();
+          }
+          
+        });
+        jQuery(document).on('change','#teacherPostion',function(){
+          var selectval = $(this).val();
+          if(selectval == ""){
+            jQuery('.position_depend_div').hide();
+          }else{
+            jQuery('.position_depend_div').show();
+          }
+          
+        });
+       /* $('.emailAddressCon').click(function() {
+              if ($(".emailAddressCon").is(":checked") == true) {
+                  $('#textbox1').val('yes');
+              } else {
+                  $('#textbox1').val('no');
+              }
+          });*/
+        $(document).on('click','.emailAddressCon',function(){
+          if ($(".emailAddressCon").is(":checked") == true) {
+            $('.email_dep_div').show();
+          }else{
+            $('.email_dep_div').hide();
+          }
+          
+        });
+
+        $(document).on('click','.selectBox',function(){
+       
+            $(this).find('.dropdown-menu').toggleClass("visibility");
+        })
+        $(document).on('click','.examinerClass',function(){
+       
+           var valll = $(this).val();
+           
+           if(valll == "Yes"){
+              $('.teacher_depe_dic').show();
+           }else{
+            $('.teacher_depe_dic').hide();
+           }
+        })
+      })
+    </script>
+
+  </body>
+</html>
